@@ -41,3 +41,39 @@ for(let i = 0; i < numeros.length; i++){
 console.log(somando)
 
 /////////////////////////////////////////////////////////////
+
+// Multiplos de 2 até 20.
+
+function multiply(){
+    let numbersMultiply = [];
+    for(let i = 0; i <= 20; i ++){
+        if(i % 2 === 0){
+            numbersMultiply.push(i);
+        }
+    }
+    return numbersMultiply
+}
+
+console.log(multiply())
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+function numbersOrdem(...ordemArr){
+    let numerosOrdenados = [];
+    for (let i = 1; i < ordemArr.length; i ++) {
+        for (let j = 0; j < i; j ++) {
+            if (ordemArr[i] < ordemArr[j]) {
+                let position = ordemArr[i];
+                ordemArr[i] = ordemArr[j];
+                ordemArr[j] = position;
+                numerosOrdenados.push(ordemArr[position])
+            }
+        }
+      }
+      return numerosOrdenados;
+
+}
+  console.log(numbersOrdem(5, 9, 3, 19, 70, 8, 100, 2, 35, 27))
